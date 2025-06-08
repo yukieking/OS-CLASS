@@ -1,0 +1,257 @@
+Script started on 2025-06-05 09:24:17+09:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="141" LINES="13"]
+(base) s2510209@kagayaki:~/i233-assignmrnt2/process$ ./sim_sched_p
+0.000 Scheduler System Initialized. Creating processes...
+0.000 Process#1 Created as state READY
+0.000 Process#2 Created as state READY
+0.000 Process#3 Created as state READY
+0.000 Process#4 Created as state READY
+0.000 Process#5 Created as state READY
+0.000 Process#6 Created as state READY
+0.000 Scheduler All processes created. Starting scheduler.
+0.000 Process#1 [Trace] State change READY->RUNNING
+0.000 Process#1 [App] Requesting I/O (10 units)
+0.000 Process#1 [Trace] State change RUNNING->BLOCKED (I/O request)
+0.000 Process#2 [Trace] State change READY->RUNNING
+0.000 Process#2 [App] Requesting I/O (100 units)
+0.000 Process#2 [Trace] State change RUNNING->BLOCKED (I/O request)
+0.000 Process#3 [Trace] State change READY->RUNNING
+0.000 Process#3 [App] Requesting I/O (100 units)
+0.000 Process#3 [Trace] State change RUNNING->BLOCKED (I/O request)
+0.000 Process#4 [Trace] State change READY->RUNNING
+0.000 Process#4 [App] Requesting I/O (100 units)
+0.000 Process#4 [Trace] State change RUNNING->BLOCKED (I/O request)
+0.000 Process#5 [Trace] State change READY->RUNNING
+0.000 Process#5 [App] Requesting I/O (100 units)
+0.000 Process#5 [Trace] State change RUNNING->BLOCKED (I/O request)
+0.000 Process#6 [Trace] State change READY->RUNNING
+0.000 Process#6 [App] Requesting I/O (100 units)
+0.000 Process#6 [Trace] State change RUNNING->BLOCKED (I/O request)
+0.000 Scheduler [Trace] No active process, waiting for next interrupt
+0.010 Process#1 [Trace] State change BLOCKED->READY (I/O ready interrupt)
+0.010 Process#1 [Trace] State change READY->RUNNING
+0.010 Process#1 [App] Starting CPU burst (1000 units)
+0.100 Process#2 [Trace] State change BLOCKED->READY (I/O ready interrupt)
+0.100 Process#3 [Trace] State change BLOCKED->READY (I/O ready interrupt)
+0.100 Process#4 [Trace] State change BLOCKED->READY (I/O ready interrupt)
+0.100 Process#5 [Trace] State change BLOCKED->READY (I/O ready interrupt)
+0.100 Process#6 [Trace] State change BLOCKED->READY (I/O ready interrupt)
+0.110 Process#1 [Trace] CPU time slice expired (CPU runout interrupt)
+0.110 Process#1 [Trace] State change RUNNING->READY (scheduler called)
+0.110 Process#2 [Trace] State change READY->RUNNING
+0.110 Process#2 [App] Starting CPU burst (10 units)
+0.120 Process#2 [App] Requesting I/O (100 units)
+0.120 Process#2 [Trace] State change RUNNING->BLOCKED (I/O request)
+0.120 Process#3 [Trace] State change READY->RUNNING
+0.120 Process#3 [App] Starting CPU burst (10 units)
+0.130 Process#3 [App] Requesting I/O (100 units)
+0.130 Process#3 [Trace] State change RUNNING->BLOCKED (I/O request)
+0.130 Process#4 [Trace] State change READY->RUNNING
+0.130 Process#4 [App] Starting CPU burst (10 units)
+0.140 Process#4 [App] Requesting I/O (100 units)
+0.140 Process#4 [Trace] State change RUNNING->BLOCKED (I/O request)
+0.140 Process#5 [Trace] State change READY->RUNNING
+0.140 Process#5 [App] Starting CPU burst (10 units)
+0.150 Process#5 [App] Requesting I/O (100 units)
+0.150 Process#5 [Trace] State change RUNNING->BLOCKED (I/O request)
+0.150 Process#6 [Trace] State change READY->RUNNING
+0.150 Process#6 [App] Starting CPU burst (10 units)
+0.160 Process#6 [App] Requesting I/O (100 units)
+0.160 Process#6 [Trace] State change RUNNING->BLOCKED (I/O request)
+0.160 Process#1 [Trace] State change READY->RUNNING
+0.220 Process#2 [Trace] State change BLOCKED->READY (I/O ready interrupt)
+0.230 Process#3 [Trace] State change BLOCKED->READY (I/O ready interrupt)
+0.240 Process#4 [Trace] State change BLOCKED->READY (I/O ready interrupt)
+0.250 Process#5 [Trace] State change BLOCKED->READY (I/O ready interrupt)
+0.260 Process#1 [Trace] CPU time slice expired (CPU runout interrupt)
+0.260 Process#1 [Trace] State change RUNNING->READY (scheduler called)
+0.260 Process#2 [Trace] State change READY->RUNNING
+0.260 Process#2 [App] Starting CPU burst (10 units)
+0.260 Process#6 [Trace] State change BLOCKED->READY (I/O ready interrupt)
+0.270 Process#2 [App] Requesting I/O (100 units)
+0.270 Process#2 [Trace] State change RUNNING->BLOCKED (I/O request)
+0.270 Process#3 [Trace] State change READY->RUNNING
+0.270 Process#3 [App] Starting CPU burst (10 units)
+0.280 Process#3 [App] Requesting I/O (100 units)
+0.280 Process#3 [Trace] State change RUNNING->BLOCKED (I/O request)
+0.280 Process#4 [Trace] State change READY->RUNNING
+0.280 Process#4 [App] Starting CPU burst (10 units)
+0.290 Process#4 [App] Requesting I/O (100 units)
+0.290 Process#4 [Trace] State change RUNNING->BLOCKED (I/O request)
+0.290 Process#5 [Trace] State change READY->RUNNING
+0.290 Process#5 [App] Starting CPU burst (10 units)
+0.300 Process#5 [App] Requesting I/O (100 units)
+0.300 Process#5 [Trace] State change RUNNING->BLOCKED (I/O request)
+0.300 Process#1 [Trace] State change READY->RUNNING
+0.370 Process#2 [Trace] State change BLOCKED->READY (I/O ready interrupt)
+0.380 Process#3 [Trace] State change BLOCKED->READY (I/O ready interrupt)
+0.390 Process#4 [Trace] State change BLOCKED->READY (I/O ready interrupt)
+0.400 Process#1 [Trace] CPU time slice expired (CPU runout interrupt)
+0.400 Process#1 [Trace] State change RUNNING->READY (scheduler called)
+0.400 Process#6 [Trace] State change READY->RUNNING
+0.400 Process#6 [App] Starting CPU burst (10 units)
+0.400 Process#5 [Trace] State change BLOCKED->READY (I/O ready interrupt)
+0.410 Process#6 [App] Requesting I/O (100 units)
+0.410 Process#6 [Trace] State change RUNNING->BLOCKED (I/O request)
+0.410 Process#2 [Trace] State change READY->RUNNING
+0.410 Process#2 [App] Starting CPU burst (10 units)
+0.420 Process#2 [App] Requesting I/O (100 units)
+0.420 Process#2 [Trace] State change RUNNING->BLOCKED (I/O request)
+0.420 Process#3 [Trace] State change READY->RUNNING
+0.420 Process#3 [App] Starting CPU burst (10 units)
+0.430 Process#3 [App] Requesting I/O (100 units)
+0.430 Process#3 [Trace] State change RUNNING->BLOCKED (I/O request)
+0.430 Process#4 [Trace] State change READY->RUNNING
+0.430 Process#4 [App] Starting CPU burst (10 units)
+0.440 Process#4 [App] Requesting I/O (100 units)
+0.440 Process#4 [Trace] State change RUNNING->BLOCKED (I/O request)
+0.440 Process#1 [Trace] State change READY->RUNNING
+0.510 Process#6 [Trace] State change BLOCKED->READY (I/O ready interrupt)
+0.520 Process#2 [Trace] State change BLOCKED->READY (I/O ready interrupt)
+0.530 Process#3 [Trace] State change BLOCKED->READY (I/O ready interrupt)
+0.540 Process#1 [Trace] CPU time slice expired (CPU runout interrupt)
+0.540 Process#1 [Trace] State change RUNNING->READY (scheduler called)
+0.540 Process#5 [Trace] State change READY->RUNNING
+0.540 Process#5 [App] Starting CPU burst (10 units)
+0.540 Process#4 [Trace] State change BLOCKED->READY (I/O ready interrupt)
+0.550 Process#5 [App] Requesting I/O (100 units)
+0.550 Process#5 [Trace] State change RUNNING->BLOCKED (I/O request)
+0.550 Process#6 [Trace] State change READY->RUNNING
+0.550 Process#6 [App] Starting CPU burst (10 units)
+0.560 Process#6 [App] Requesting I/O (100 units)
+0.560 Process#6 [Trace] State change RUNNING->BLOCKED (I/O request)
+0.560 Process#2 [Trace] State change READY->RUNNING
+0.560 Process#2 [App] Starting CPU burst (10 units)
+0.570 Process#2 [App] Requesting I/O (100 units)
+0.570 Process#2 [Trace] State change RUNNING->BLOCKED (I/O request)
+0.570 Process#3 [Trace] State change READY->RUNNING
+0.570 Process#3 [App] Starting CPU burst (10 units)
+0.580 Process#3 [App] Requesting I/O (100 units)
+0.580 Process#3 [Trace] State change RUNNING->BLOCKED (I/O request)
+0.580 Process#1 [Trace] State change READY->RUNNING
+0.650 Process#5 [Trace] State change BLOCKED->READY (I/O ready interrupt)
+0.660 Process#6 [Trace] State change BLOCKED->READY (I/O ready interrupt)
+0.670 Process#2 [Trace] State change BLOCKED->READY (I/O ready interrupt)
+0.680 Process#1 [Trace] CPU time slice expired (CPU runout interrupt)
+0.680 Process#1 [Trace] State change RUNNING->READY (scheduler called)
+0.680 Process#4 [Trace] State change READY->RUNNING
+0.680 Process#4 [App] Starting CPU burst (10 units)
+0.680 Process#3 [Trace] State change BLOCKED->READY (I/O ready interrupt)
+0.690 Process#4 [App] Requesting I/O (100 units)
+0.690 Process#4 [Trace] State change RUNNING->BLOCKED (I/O request)
+0.690 Process#5 [Trace] State change READY->RUNNING
+0.690 Process#5 [App] Starting CPU burst (10 units)
+0.700 Process#5 [App] Requesting I/O (100 units)
+0.700 Process#5 [Trace] State change RUNNING->BLOCKED (I/O request)
+0.700 Process#6 [Trace] State change READY->RUNNING
+0.700 Process#6 [App] Starting CPU burst (10 units)
+0.710 Process#6 [App] Requesting I/O (100 units)
+0.710 Process#6 [Trace] State change RUNNING->BLOCKED (I/O request)
+0.710 Process#2 [Trace] State change READY->RUNNING
+0.710 Process#2 [App] Starting CPU burst (10 units)
+0.720 Process#2 [App] I/O-bound task finished
+0.720 Process#2 Terminated
+0.720 Process#1 [Trace] State change READY->RUNNING
+0.790 Process#4 [Trace] State change BLOCKED->READY (I/O ready interrupt)
+0.800 Process#5 [Trace] State change BLOCKED->READY (I/O ready interrupt)
+0.810 Process#6 [Trace] State change BLOCKED->READY (I/O ready interrupt)
+0.820 Process#1 [Trace] CPU time slice expired (CPU runout interrupt)
+0.820 Process#1 [Trace] State change RUNNING->READY (scheduler called)
+0.820 Process#3 [Trace] State change READY->RUNNING
+0.820 Process#3 [App] Starting CPU burst (10 units)
+0.830 Process#3 [App] I/O-bound task finished
+0.830 Process#3 Terminated
+0.830 Process#4 [Trace] State change READY->RUNNING
+0.830 Process#4 [App] Starting CPU burst (10 units)
+0.840 Process#4 [App] I/O-bound task finished
+0.840 Process#4 Terminated
+0.840 Process#5 [Trace] State change READY->RUNNING
+0.840 Process#5 [App] Starting CPU burst (10 units)
+0.850 Process#5 [App] I/O-bound task finished
+0.850 Process#5 Terminated
+0.850 Process#6 [Trace] State change READY->RUNNING
+0.850 Process#6 [App] Starting CPU burst (10 units)
+0.860 Process#6 [App] I/O-bound task finished
+0.860 Process#6 Terminated
+0.860 Process#1 [Trace] State change READY->RUNNING
+0.960 Process#1 [Trace] CPU time slice expired (CPU runout interrupt)
+0.960 Process#1 [Trace] State change RUNNING->READY (scheduler called)
+0.960 Process#1 [Trace] State change READY->RUNNING
+1.060 Process#1 [Trace] CPU time slice expired (CPU runout interrupt)
+1.060 Process#1 [Trace] State change RUNNING->READY (scheduler called)
+1.060 Process#1 [Trace] State change READY->RUNNING
+1.160 Process#1 [Trace] CPU time slice expired (CPU runout interrupt)
+1.160 Process#1 [Trace] State change RUNNING->READY (scheduler called)
+1.160 Process#1 [Trace] State change READY->RUNNING
+1.260 Process#1 [App] Requesting I/O (10 units)
+1.260 Process#1 [Trace] State change RUNNING->BLOCKED (I/O request)
+1.260 Scheduler [Trace] No active process, waiting for next interrupt
+1.270 Process#1 [Trace] State change BLOCKED->READY (I/O ready interrupt)
+1.270 Process#1 [Trace] State change READY->RUNNING
+1.270 Process#1 [App] Starting CPU burst (1000 units)
+1.370 Process#1 [Trace] CPU time slice expired (CPU runout interrupt)
+1.370 Process#1 [Trace] State change RUNNING->READY (scheduler called)
+1.370 Process#1 [Trace] State change READY->RUNNING
+1.470 Process#1 [Trace] CPU time slice expired (CPU runout interrupt)
+1.470 Process#1 [Trace] State change RUNNING->READY (scheduler called)
+1.470 Process#1 [Trace] State change READY->RUNNING
+1.570 Process#1 [Trace] CPU time slice expired (CPU runout interrupt)
+1.570 Process#1 [Trace] State change RUNNING->READY (scheduler called)
+1.570 Process#1 [Trace] State change READY->RUNNING
+1.670 Process#1 [Trace] CPU time slice expired (CPU runout interrupt)
+1.670 Process#1 [Trace] State change RUNNING->READY (scheduler called)
+1.670 Process#1 [Trace] State change READY->RUNNING
+1.770 Process#1 [Trace] CPU time slice expired (CPU runout interrupt)
+1.770 Process#1 [Trace] State change RUNNING->READY (scheduler called)
+1.770 Process#1 [Trace] State change READY->RUNNING
+1.870 Process#1 [Trace] CPU time slice expired (CPU runout interrupt)
+1.870 Process#1 [Trace] State change RUNNING->READY (scheduler called)
+1.870 Process#1 [Trace] State change READY->RUNNING
+1.970 Process#1 [Trace] CPU time slice expired (CPU runout interrupt)
+1.970 Process#1 [Trace] State change RUNNING->READY (scheduler called)
+1.970 Process#1 [Trace] State change READY->RUNNING
+2.070 Process#1 [Trace] CPU time slice expired (CPU runout interrupt)
+2.070 Process#1 [Trace] State change RUNNING->READY (scheduler called)
+2.070 Process#1 [Trace] State change READY->RUNNING
+2.170 Process#1 [Trace] CPU time slice expired (CPU runout interrupt)
+2.170 Process#1 [Trace] State change RUNNING->READY (scheduler called)
+2.170 Process#1 [Trace] State change READY->RUNNING
+2.270 Process#1 [App] Requesting I/O (10 units)
+2.270 Process#1 [Trace] State change RUNNING->BLOCKED (I/O request)
+2.270 Scheduler [Trace] No active process, waiting for next interrupt
+2.280 Process#1 [Trace] State change BLOCKED->READY (I/O ready interrupt)
+2.280 Process#1 [Trace] State change READY->RUNNING
+2.280 Process#1 [App] Starting CPU burst (1000 units)
+2.380 Process#1 [Trace] CPU time slice expired (CPU runout interrupt)
+2.380 Process#1 [Trace] State change RUNNING->READY (scheduler called)
+2.380 Process#1 [Trace] State change READY->RUNNING
+2.480 Process#1 [Trace] CPU time slice expired (CPU runout interrupt)
+2.480 Process#1 [Trace] State change RUNNING->READY (scheduler called)
+2.480 Process#1 [Trace] State change READY->RUNNING
+2.580 Process#1 [Trace] CPU time slice expired (CPU runout interrupt)
+2.580 Process#1 [Trace] State change RUNNING->READY (scheduler called)
+2.580 Process#1 [Trace] State change READY->RUNNING
+2.680 Process#1 [Trace] CPU time slice expired (CPU runout interrupt)
+2.680 Process#1 [Trace] State change RUNNING->READY (scheduler called)
+2.680 Process#1 [Trace] State change READY->RUNNING
+2.780 Process#1 [Trace] CPU time slice expired (CPU runout interrupt)
+2.780 Process#1 [Trace] State change RUNNING->READY (scheduler called)
+2.780 Process#1 [Trace] State change READY->RUNNING
+2.880 Process#1 [Trace] CPU time slice expired (CPU runout interrupt)
+2.880 Process#1 [Trace] State change RUNNING->READY (scheduler called)
+2.880 Process#1 [Trace] State change READY->RUNNING
+2.980 Process#1 [Trace] CPU time slice expired (CPU runout interrupt)
+2.980 Process#1 [Trace] State change RUNNING->READY (scheduler called)
+2.980 Process#1 [Trace] State change READY->RUNNING
+3.080 Process#1 [Trace] CPU time slice expired (CPU runout interrupt)
+3.080 Process#1 [Trace] State change RUNNING->READY (scheduler called)
+3.080 Process#1 [Trace] State change READY->RUNNING
+3.180 Process#1 [Trace] CPU time slice expired (CPU runout interrupt)
+3.180 Process#1 [Trace] State change RUNNING->READY (scheduler called)
+3.180 Process#1 [Trace] State change READY->RUNNING
+3.280 Process#1 [App] CPU-bound task finished
+3.280 Process#1 Terminated
+3.280 Scheduler [Trace] No active process, waiting for next interrupt
+3.280 Scheduler All processes terminated. Simulation finished.
+(base) s2510209@kagayaki:~/i233-assignmrnt2/process$ exit
+
+Script done on 2025-06-05 09:24:37+09:00 [COMMAND_EXIT_CODE="0"]

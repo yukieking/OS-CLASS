@@ -1,0 +1,65 @@
+Script started on 2025-06-05 09:43:05+09:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="141" LINES="35"]
+(base) s2510209@kagayaki:~/i233-assignmrnt2/process$ ./sim_sched_advanced
+0.000 Scheduler System Initialized. Creating processes...
+0.000 Process#1(Prio1) Created as state READY with priority 1
+0.000 Process#2(Prio2) Created as state READY with priority 2
+0.000 Process#3(Prio3) Created as state READY with priority 3
+0.000 Process#4(Prio2) Created as state READY with priority 2
+0.000 Process#5(Prio2) Created as state READY with priority 2
+0.000 Scheduler All processes created. Starting scheduler.
+0.000 Process#1(Prio1) [App] Interactive Process: Started
+0.000 Process#1(Prio1) [App] Interactive: Waiting for user input (180 I/O units)
+0.000 Process#2(Prio2) [App] Data Processing Task: Starting
+0.000 Process#2(Prio2) [App] Data Processing: Loading initial data (I/O 150 units)
+0.000 Process#4(Prio2) [App] Standard I/O-Bound Task: Starting
+0.000 Process#4(Prio2) [App] Standard I/O-Bound: Requesting I/O (100 units)
+0.000 Process#5(Prio2) [App] Standard I/O-Bound Task: Starting
+0.000 Process#5(Prio2) [App] Standard I/O-Bound: Requesting I/O (100 units)
+0.000 Process#3(Prio3) [App] Standard CPU-Bound Task: Starting
+0.000 Process#3(Prio3) [App] Standard CPU-Bound: Requesting I/O (10 units)
+0.010 Process#3(Prio3) [App] Standard CPU-Bound: Starting CPU burst (1000 units)
+0.110 Process#4(Prio2) [App] Standard I/O-Bound: Starting CPU burst (10 units)
+0.120 Process#4(Prio2) [App] Standard I/O-Bound: Requesting I/O (100 units)
+0.120 Process#5(Prio2) [App] Standard I/O-Bound: Starting CPU burst (10 units)
+0.130 Process#5(Prio2) [App] Standard I/O-Bound: Requesting I/O (100 units)
+0.230 Process#1(Prio1) [App] Interactive: Processing input (6 CPU units)
+0.236 Process#1(Prio1) [App] Interactive: Waiting for user input (134 I/O units)
+0.236 Process#2(Prio2) [App] Data Processing: Performing intensive calculations (CPU 800 units)
+0.336 Process#4(Prio2) [App] Standard I/O-Bound: Starting CPU burst (10 units)
+0.346 Process#4(Prio2) [App] Standard I/O-Bound: Requesting I/O (100 units)
+0.346 Process#5(Prio2) [App] Standard I/O-Bound: Starting CPU burst (10 units)
+0.356 Process#5(Prio2) [App] Standard I/O-Bound: Requesting I/O (100 units)
+0.456 Process#1(Prio1) [App] Interactive: Processing input (20 CPU units)
+0.476 Process#1(Prio1) [App] Interactive: Waiting for user input (68 I/O units)
+0.476 Process#4(Prio2) [App] Standard I/O-Bound: Starting CPU burst (10 units)
+0.486 Process#4(Prio2) [App] Standard I/O-Bound Task: Finished
+0.486 Process#4(Prio2) Terminated. Turnaround Time: 0.486s
+0.586 Process#1(Prio1) [App] Interactive: Processing input (9 CPU units)
+0.595 Process#1(Prio1) [App] Interactive: Waiting for user input (150 I/O units)
+0.595 Process#5(Prio2) [App] Standard I/O-Bound: Starting CPU burst (10 units)
+0.605 Process#5(Prio2) [App] Standard I/O-Bound Task: Finished
+0.605 Process#5(Prio2) Terminated. Turnaround Time: 0.605s
+0.805 Process#1(Prio1) [App] Interactive: Processing input (5 CPU units)
+0.810 Process#1(Prio1) [App] Interactive: Waiting for user input (54 I/O units)
+0.910 Process#1(Prio1) [App] Interactive: Processing input (23 CPU units)
+0.933 Process#1(Prio1) [App] Interactive Process: Session ended
+0.933 Process#1(Prio1) Terminated. Turnaround Time: 0.933s
+1.133 Process#2(Prio2) [App] Data Processing: Storing intermediate results (I/O 50 units)
+1.233 Process#2(Prio2) [App] Data Processing: Quick processing (144 CPU units)
+1.377 Process#2(Prio2) [App] Data Processing: Loading more data (I/O 70 units)
+1.477 Process#2(Prio2) [App] Data Processing: Storing intermediate results (I/O 50 units)
+1.577 Process#2(Prio2) [App] Data Processing: Quick processing (115 CPU units)
+1.692 Process#2(Prio2) [App] Data Processing: Loading more data (I/O 70 units)
+1.792 Process#2(Prio2) [App] Data Processing: Finalizing calculations (CPU 400 units)
+2.192 Process#2(Prio2) [App] Data Processing: Saving final report (I/O 100 units)
+2.392 Process#2(Prio2) [App] Data Processing Task: Finished
+2.392 Process#2(Prio2) Terminated. Turnaround Time: 2.392s
+2.592 Process#3(Prio3) [App] Standard CPU-Bound: Requesting I/O (10 units)
+2.602 Process#3(Prio3) [App] Standard CPU-Bound: Starting CPU burst (1000 units)
+3.602 Process#3(Prio3) [App] Standard CPU-Bound Task: Finished
+3.602 Process#3(Prio3) Terminated. Turnaround Time: 3.602s
+3.602 Scheduler All processes terminated. Simulation finished.
+(base) s2510209@kagayaki:~/i233-assignmrnt2/process$ exit
+exit
+
+Script done on 2025-06-05 09:43:14+09:00 [COMMAND_EXIT_CODE="0"]

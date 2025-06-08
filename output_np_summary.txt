@@ -1,0 +1,82 @@
+Script started on 2025-06-05 09:27:07+09:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="141" LINES="13"]
+(base) s2510209@kagayaki:~/i233-assignmrnt2/process$ ./sim_sched_np
+0.000 Scheduler System Initialized. Creating processes...
+0.000 Process#1 Created as state READY
+0.000 Process#2 Created as state READY
+0.000 Process#3 Created as state READY
+0.000 Process#4 Created as state READY
+0.000 Process#5 Created as state READY
+0.000 Process#6 Created as state READY
+0.000 Scheduler All processes created. Starting scheduler.
+0.000 Process#1 [App] Requesting I/O (10 units)
+0.000 Process#2 [App] Requesting I/O (100 units)
+0.000 Process#3 [App] Requesting I/O (100 units)
+0.000 Process#4 [App] Requesting I/O (100 units)
+0.000 Process#5 [App] Requesting I/O (100 units)
+0.000 Process#6 [App] Requesting I/O (100 units)
+0.010 Process#1 [App] Starting CPU burst (1000 units)
+1.010 Process#1 [App] Requesting I/O (10 units)
+1.010 Process#2 [App] Starting CPU burst (10 units)
+1.020 Process#2 [App] Requesting I/O (100 units)
+1.020 Process#3 [App] Starting CPU burst (10 units)
+1.030 Process#3 [App] Requesting I/O (100 units)
+1.030 Process#4 [App] Starting CPU burst (10 units)
+1.040 Process#4 [App] Requesting I/O (100 units)
+1.040 Process#5 [App] Starting CPU burst (10 units)
+1.050 Process#5 [App] Requesting I/O (100 units)
+1.050 Process#6 [App] Starting CPU burst (10 units)
+1.060 Process#6 [App] Requesting I/O (100 units)
+1.060 Process#1 [App] Starting CPU burst (1000 units)
+2.060 Process#1 [App] Requesting I/O (10 units)
+2.060 Process#2 [App] Starting CPU burst (10 units)
+2.070 Process#2 [App] Requesting I/O (100 units)
+2.070 Process#3 [App] Starting CPU burst (10 units)
+2.080 Process#3 [App] Requesting I/O (100 units)
+2.080 Process#4 [App] Starting CPU burst (10 units)
+2.090 Process#4 [App] Requesting I/O (100 units)
+2.090 Process#5 [App] Starting CPU burst (10 units)
+2.100 Process#5 [App] Requesting I/O (100 units)
+2.100 Process#6 [App] Starting CPU burst (10 units)
+2.110 Process#6 [App] Requesting I/O (100 units)
+2.110 Process#1 [App] Starting CPU burst (1000 units)
+3.110 Process#1 [App] CPU-bound task finished
+3.110 Process#1 Terminated
+3.110 Process#2 [App] Starting CPU burst (10 units)
+3.120 Process#2 [App] Requesting I/O (100 units)
+3.120 Process#3 [App] Starting CPU burst (10 units)
+3.130 Process#3 [App] Requesting I/O (100 units)
+3.130 Process#4 [App] Starting CPU burst (10 units)
+3.140 Process#4 [App] Requesting I/O (100 units)
+3.140 Process#5 [App] Starting CPU burst (10 units)
+3.150 Process#5 [App] Requesting I/O (100 units)
+3.150 Process#6 [App] Starting CPU burst (10 units)
+3.160 Process#6 [App] Requesting I/O (100 units)
+3.220 Process#2 [App] Starting CPU burst (10 units)
+3.230 Process#2 [App] Requesting I/O (100 units)
+3.230 Process#3 [App] Starting CPU burst (10 units)
+3.240 Process#3 [App] Requesting I/O (100 units)
+3.240 Process#4 [App] Starting CPU burst (10 units)
+3.250 Process#4 [App] Requesting I/O (100 units)
+3.250 Process#5 [App] Starting CPU burst (10 units)
+3.260 Process#5 [App] Requesting I/O (100 units)
+3.260 Process#6 [App] Starting CPU burst (10 units)
+3.270 Process#6 [App] Requesting I/O (100 units)
+3.330 Process#2 [App] Starting CPU burst (10 units)
+3.340 Process#2 [App] I/O-bound task finished
+3.340 Process#2 Terminated
+3.340 Process#3 [App] Starting CPU burst (10 units)
+3.350 Process#3 [App] I/O-bound task finished
+3.350 Process#3 Terminated
+3.350 Process#4 [App] Starting CPU burst (10 units)
+3.360 Process#4 [App] I/O-bound task finished
+3.360 Process#4 Terminated
+3.360 Process#5 [App] Starting CPU burst (10 units)
+3.370 Process#5 [App] I/O-bound task finished
+3.370 Process#5 Terminated
+3.370 Process#6 [App] Starting CPU burst (10 units)
+3.380 Process#6 [App] I/O-bound task finished
+3.380 Scheduler All processes terminated. Simulation finished.
+(base) s2510209@kagayaki:~/i233-assignmrnt2/process$ exit
+exit
+
+Script done on 2025-06-05 09:27:27+09:00 [COMMAND_EXIT_CODE="0"]

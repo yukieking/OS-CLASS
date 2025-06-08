@@ -1,0 +1,220 @@
+Script started on 2025-06-05 09:43:05+09:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="141" LINES="35"]
+(base) s2510209@kagayaki:~/i233-assignmrnt2/process$ ./sim_sched_advanced
+0.000 Scheduler System Initialized. Creating processes...
+0.000 Process#1(Prio1) Created as state READY with priority 1
+0.000 Process#2(Prio2) Created as state READY with priority 2
+0.000 Process#3(Prio3) Created as state READY with priority 3
+0.000 Process#4(Prio2) Created as state READY with priority 2
+0.000 Process#5(Prio2) Created as state READY with priority 2
+0.000 Scheduler All processes created. Starting scheduler.
+0.000 Process#1(Prio1) [Trace] State change READY->RUNNING
+0.000 Process#1(Prio1) [App] Interactive Process: Started
+0.000 Process#1(Prio1) [App] Interactive: Waiting for user input (180 I/O units)
+0.000 Process#1(Prio1) [Trace] State change RUNNING->BLOCKED (I/O request)
+0.000 Process#2(Prio2) [Trace] State change READY->RUNNING
+0.000 Process#2(Prio2) [App] Data Processing Task: Starting
+0.000 Process#2(Prio2) [App] Data Processing: Loading initial data (I/O 150 units)
+0.000 Process#2(Prio2) [Trace] State change RUNNING->BLOCKED (I/O request)
+0.000 Process#4(Prio2) [Trace] State change READY->RUNNING
+0.000 Process#4(Prio2) [App] Standard I/O-Bound Task: Starting
+0.000 Process#4(Prio2) [App] Standard I/O-Bound: Requesting I/O (100 units)
+0.000 Process#4(Prio2) [Trace] State change RUNNING->BLOCKED (I/O request)
+0.000 Process#5(Prio2) [Trace] State change READY->RUNNING
+0.000 Process#5(Prio2) [App] Standard I/O-Bound Task: Starting
+0.000 Process#5(Prio2) [App] Standard I/O-Bound: Requesting I/O (100 units)
+0.000 Process#5(Prio2) [Trace] State change RUNNING->BLOCKED (I/O request)
+0.000 Process#3(Prio3) [Trace] State change READY->RUNNING
+0.000 Process#3(Prio3) [App] Standard CPU-Bound Task: Starting
+0.000 Process#3(Prio3) [App] Standard CPU-Bound: Requesting I/O (10 units)
+0.000 Process#3(Prio3) [Trace] State change RUNNING->BLOCKED (I/O request)
+0.000 Scheduler [Trace] No active process, waiting for next interrupt
+0.010 Process#3(Prio3) [Trace] State change BLOCKED->READY (I/O ready interrupt)
+0.010 Process#3(Prio3) [Trace] State change READY->RUNNING
+0.010 Process#3(Prio3) [App] Standard CPU-Bound: Starting CPU burst (1000 units)
+0.100 Process#4(Prio2) [Trace] State change BLOCKED->READY (I/O ready interrupt)
+0.100 Process#5(Prio2) [Trace] State change BLOCKED->READY (I/O ready interrupt)
+0.110 Process#3(Prio3) [Trace] CPU time slice expired (CPU runout interrupt)
+0.110 Process#3(Prio3) [Trace] State change RUNNING->READY (scheduler called)
+0.110 Process#4(Prio2) [Trace] State change READY->RUNNING
+0.110 Process#4(Prio2) [App] Standard I/O-Bound: Starting CPU burst (10 units)
+0.120 Process#4(Prio2) [App] Standard I/O-Bound: Requesting I/O (100 units)
+0.120 Process#4(Prio2) [Trace] State change RUNNING->BLOCKED (I/O request)
+0.120 Process#5(Prio2) [Trace] State change READY->RUNNING
+0.120 Process#5(Prio2) [App] Standard I/O-Bound: Starting CPU burst (10 units)
+0.130 Process#5(Prio2) [App] Standard I/O-Bound: Requesting I/O (100 units)
+0.130 Process#5(Prio2) [Trace] State change RUNNING->BLOCKED (I/O request)
+0.130 Process#3(Prio3) [Trace] State change READY->RUNNING
+0.150 Process#2(Prio2) [Trace] State change BLOCKED->READY (I/O ready interrupt)
+0.180 Process#1(Prio1) [Trace] State change BLOCKED->READY (I/O ready interrupt)
+0.220 Process#4(Prio2) [Trace] State change BLOCKED->READY (I/O ready interrupt)
+0.230 Process#3(Prio3) [Trace] CPU time slice expired (CPU runout interrupt)
+0.230 Process#3(Prio3) [Trace] State change RUNNING->READY (scheduler called)
+0.230 Process#1(Prio1) [Trace] State change READY->RUNNING
+0.230 Process#1(Prio1) [App] Interactive: Processing input (6 CPU units)
+0.230 Process#5(Prio2) [Trace] State change BLOCKED->READY (I/O ready interrupt)
+0.236 Process#1(Prio1) [App] Interactive: Waiting for user input (134 I/O units)
+0.236 Process#1(Prio1) [Trace] State change RUNNING->BLOCKED (I/O request)
+0.236 Process#2(Prio2) [Trace] State change READY->RUNNING
+0.236 Process#2(Prio2) [App] Data Processing: Performing intensive calculations (CPU 800 units)
+0.336 Process#2(Prio2) [Trace] CPU time slice expired (CPU runout interrupt)
+0.336 Process#2(Prio2) [Trace] State change RUNNING->READY (scheduler called)
+0.336 Process#4(Prio2) [Trace] State change READY->RUNNING
+0.336 Process#4(Prio2) [App] Standard I/O-Bound: Starting CPU burst (10 units)
+0.346 Process#4(Prio2) [App] Standard I/O-Bound: Requesting I/O (100 units)
+0.346 Process#4(Prio2) [Trace] State change RUNNING->BLOCKED (I/O request)
+0.346 Process#5(Prio2) [Trace] State change READY->RUNNING
+0.346 Process#5(Prio2) [App] Standard I/O-Bound: Starting CPU burst (10 units)
+0.356 Process#5(Prio2) [App] Standard I/O-Bound: Requesting I/O (100 units)
+0.356 Process#5(Prio2) [Trace] State change RUNNING->BLOCKED (I/O request)
+0.356 Process#2(Prio2) [Trace] State change READY->RUNNING
+0.370 Process#1(Prio1) [Trace] State change BLOCKED->READY (I/O ready interrupt)
+0.446 Process#4(Prio2) [Trace] State change BLOCKED->READY (I/O ready interrupt)
+0.456 Process#2(Prio2) [Trace] CPU time slice expired (CPU runout interrupt)
+0.456 Process#2(Prio2) [Trace] State change RUNNING->READY (scheduler called)
+0.456 Process#1(Prio1) [Trace] State change READY->RUNNING
+0.456 Process#1(Prio1) [App] Interactive: Processing input (20 CPU units)
+0.456 Process#5(Prio2) [Trace] State change BLOCKED->READY (I/O ready interrupt)
+0.476 Process#1(Prio1) [App] Interactive: Waiting for user input (68 I/O units)
+0.476 Process#1(Prio1) [Trace] State change RUNNING->BLOCKED (I/O request)
+0.476 Process#4(Prio2) [Trace] State change READY->RUNNING
+0.476 Process#4(Prio2) [App] Standard I/O-Bound: Starting CPU burst (10 units)
+0.486 Process#4(Prio2) [App] Standard I/O-Bound Task: Finished
+0.486 Process#4(Prio2) Terminated. Turnaround Time: 0.486s
+0.486 Process#2(Prio2) [Trace] State change READY->RUNNING
+0.544 Process#1(Prio1) [Trace] State change BLOCKED->READY (I/O ready interrupt)
+0.586 Process#2(Prio2) [Trace] CPU time slice expired (CPU runout interrupt)
+0.586 Process#2(Prio2) [Trace] State change RUNNING->READY (scheduler called)
+0.586 Process#1(Prio1) [Trace] State change READY->RUNNING
+0.586 Process#1(Prio1) [App] Interactive: Processing input (9 CPU units)
+0.595 Process#1(Prio1) [App] Interactive: Waiting for user input (150 I/O units)
+0.595 Process#1(Prio1) [Trace] State change RUNNING->BLOCKED (I/O request)
+0.595 Process#5(Prio2) [Trace] State change READY->RUNNING
+0.595 Process#5(Prio2) [App] Standard I/O-Bound: Starting CPU burst (10 units)
+0.605 Process#5(Prio2) [App] Standard I/O-Bound Task: Finished
+0.605 Process#5(Prio2) Terminated. Turnaround Time: 0.605s
+0.605 Process#2(Prio2) [Trace] State change READY->RUNNING
+0.705 Process#2(Prio2) [Trace] CPU time slice expired (CPU runout interrupt)
+0.705 Process#2(Prio2) [Trace] State change RUNNING->READY (scheduler called)
+0.705 Process#2(Prio2) [Trace] State change READY->RUNNING
+0.745 Process#1(Prio1) [Trace] State change BLOCKED->READY (I/O ready interrupt)
+0.805 Process#2(Prio2) [Trace] CPU time slice expired (CPU runout interrupt)
+0.805 Process#2(Prio2) [Trace] State change RUNNING->READY (scheduler called)
+0.805 Process#1(Prio1) [Trace] State change READY->RUNNING
+0.805 Process#1(Prio1) [App] Interactive: Processing input (5 CPU units)
+0.810 Process#1(Prio1) [App] Interactive: Waiting for user input (54 I/O units)
+0.810 Process#1(Prio1) [Trace] State change RUNNING->BLOCKED (I/O request)
+0.810 Process#2(Prio2) [Trace] State change READY->RUNNING
+0.864 Process#1(Prio1) [Trace] State change BLOCKED->READY (I/O ready interrupt)
+0.910 Process#2(Prio2) [Trace] CPU time slice expired (CPU runout interrupt)
+0.910 Process#2(Prio2) [Trace] State change RUNNING->READY (scheduler called)
+0.910 Process#1(Prio1) [Trace] State change READY->RUNNING
+0.910 Process#1(Prio1) [App] Interactive: Processing input (23 CPU units)
+0.933 Process#1(Prio1) [App] Interactive Process: Session ended
+0.933 Process#1(Prio1) Terminated. Turnaround Time: 0.933s
+0.933 Process#2(Prio2) [Trace] State change READY->RUNNING
+1.033 Process#2(Prio2) [Trace] CPU time slice expired (CPU runout interrupt)
+1.033 Process#2(Prio2) [Trace] State change RUNNING->READY (scheduler called)
+1.033 Process#2(Prio2) [Trace] State change READY->RUNNING
+1.133 Process#2(Prio2) [App] Data Processing: Storing intermediate results (I/O 50 units)
+1.133 Process#2(Prio2) [Trace] State change RUNNING->BLOCKED (I/O request)
+1.133 Process#3(Prio3) [Trace] State change READY->RUNNING
+1.183 Process#2(Prio2) [Trace] State change BLOCKED->READY (I/O ready interrupt)
+1.233 Process#3(Prio3) [Trace] CPU time slice expired (CPU runout interrupt)
+1.233 Process#3(Prio3) [Trace] State change RUNNING->READY (scheduler called)
+1.233 Process#2(Prio2) [Trace] State change READY->RUNNING
+1.233 Process#2(Prio2) [App] Data Processing: Quick processing (144 CPU units)
+1.333 Process#2(Prio2) [Trace] CPU time slice expired (CPU runout interrupt)
+1.333 Process#2(Prio2) [Trace] State change RUNNING->READY (scheduler called)
+1.333 Process#2(Prio2) [Trace] State change READY->RUNNING
+1.377 Process#2(Prio2) [App] Data Processing: Loading more data (I/O 70 units)
+1.377 Process#2(Prio2) [Trace] State change RUNNING->BLOCKED (I/O request)
+1.377 Process#3(Prio3) [Trace] State change READY->RUNNING
+1.447 Process#2(Prio2) [Trace] State change BLOCKED->READY (I/O ready interrupt)
+1.477 Process#3(Prio3) [Trace] CPU time slice expired (CPU runout interrupt)
+1.477 Process#3(Prio3) [Trace] State change RUNNING->READY (scheduler called)
+1.477 Process#2(Prio2) [Trace] State change READY->RUNNING
+1.477 Process#2(Prio2) [App] Data Processing: Storing intermediate results (I/O 50 units)
+1.477 Process#2(Prio2) [Trace] State change RUNNING->BLOCKED (I/O request)
+1.477 Process#3(Prio3) [Trace] State change READY->RUNNING
+1.527 Process#2(Prio2) [Trace] State change BLOCKED->READY (I/O ready interrupt)
+1.577 Process#3(Prio3) [Trace] CPU time slice expired (CPU runout interrupt)
+1.577 Process#3(Prio3) [Trace] State change RUNNING->READY (scheduler called)
+1.577 Process#2(Prio2) [Trace] State change READY->RUNNING
+1.577 Process#2(Prio2) [App] Data Processing: Quick processing (115 CPU units)
+1.677 Process#2(Prio2) [Trace] CPU time slice expired (CPU runout interrupt)
+1.677 Process#2(Prio2) [Trace] State change RUNNING->READY (scheduler called)
+1.677 Process#2(Prio2) [Trace] State change READY->RUNNING
+1.692 Process#2(Prio2) [App] Data Processing: Loading more data (I/O 70 units)
+1.692 Process#2(Prio2) [Trace] State change RUNNING->BLOCKED (I/O request)
+1.692 Process#3(Prio3) [Trace] State change READY->RUNNING
+1.762 Process#2(Prio2) [Trace] State change BLOCKED->READY (I/O ready interrupt)
+1.792 Process#3(Prio3) [Trace] CPU time slice expired (CPU runout interrupt)
+1.792 Process#3(Prio3) [Trace] State change RUNNING->READY (scheduler called)
+1.792 Process#2(Prio2) [Trace] State change READY->RUNNING
+1.792 Process#2(Prio2) [App] Data Processing: Finalizing calculations (CPU 400 units)
+1.892 Process#2(Prio2) [Trace] CPU time slice expired (CPU runout interrupt)
+1.892 Process#2(Prio2) [Trace] State change RUNNING->READY (scheduler called)
+1.892 Process#2(Prio2) [Trace] State change READY->RUNNING
+1.992 Process#2(Prio2) [Trace] CPU time slice expired (CPU runout interrupt)
+1.992 Process#2(Prio2) [Trace] State change RUNNING->READY (scheduler called)
+1.992 Process#2(Prio2) [Trace] State change READY->RUNNING
+2.092 Process#2(Prio2) [Trace] CPU time slice expired (CPU runout interrupt)
+2.092 Process#2(Prio2) [Trace] State change RUNNING->READY (scheduler called)
+2.092 Process#2(Prio2) [Trace] State change READY->RUNNING
+2.192 Process#2(Prio2) [App] Data Processing: Saving final report (I/O 100 units)
+2.192 Process#2(Prio2) [Trace] State change RUNNING->BLOCKED (I/O request)
+2.192 Process#3(Prio3) [Trace] State change READY->RUNNING
+2.292 Process#3(Prio3) [Trace] CPU time slice expired (CPU runout interrupt)
+2.292 Process#3(Prio3) [Trace] State change RUNNING->READY (scheduler called)
+2.292 Process#3(Prio3) [Trace] State change READY->RUNNING
+2.292 Process#2(Prio2) [Trace] State change BLOCKED->READY (I/O ready interrupt)
+2.392 Process#3(Prio3) [Trace] CPU time slice expired (CPU runout interrupt)
+2.392 Process#3(Prio3) [Trace] State change RUNNING->READY (scheduler called)
+2.392 Process#2(Prio2) [Trace] State change READY->RUNNING
+2.392 Process#2(Prio2) [App] Data Processing Task: Finished
+2.392 Process#2(Prio2) Terminated. Turnaround Time: 2.392s
+2.392 Process#3(Prio3) [Trace] State change READY->RUNNING
+2.492 Process#3(Prio3) [Trace] CPU time slice expired (CPU runout interrupt)
+2.492 Process#3(Prio3) [Trace] State change RUNNING->READY (scheduler called)
+2.492 Process#3(Prio3) [Trace] State change READY->RUNNING
+2.592 Process#3(Prio3) [App] Standard CPU-Bound: Requesting I/O (10 units)
+2.592 Process#3(Prio3) [Trace] State change RUNNING->BLOCKED (I/O request)
+2.592 Scheduler [Trace] No active process, waiting for next interrupt
+2.602 Process#3(Prio3) [Trace] State change BLOCKED->READY (I/O ready interrupt)
+2.602 Process#3(Prio3) [Trace] State change READY->RUNNING
+2.602 Process#3(Prio3) [App] Standard CPU-Bound: Starting CPU burst (1000 units)
+2.702 Process#3(Prio3) [Trace] CPU time slice expired (CPU runout interrupt)
+2.702 Process#3(Prio3) [Trace] State change RUNNING->READY (scheduler called)
+2.702 Process#3(Prio3) [Trace] State change READY->RUNNING
+2.802 Process#3(Prio3) [Trace] CPU time slice expired (CPU runout interrupt)
+2.802 Process#3(Prio3) [Trace] State change RUNNING->READY (scheduler called)
+2.802 Process#3(Prio3) [Trace] State change READY->RUNNING
+2.902 Process#3(Prio3) [Trace] CPU time slice expired (CPU runout interrupt)
+2.902 Process#3(Prio3) [Trace] State change RUNNING->READY (scheduler called)
+2.902 Process#3(Prio3) [Trace] State change READY->RUNNING
+3.002 Process#3(Prio3) [Trace] CPU time slice expired (CPU runout interrupt)
+3.002 Process#3(Prio3) [Trace] State change RUNNING->READY (scheduler called)
+3.002 Process#3(Prio3) [Trace] State change READY->RUNNING
+3.102 Process#3(Prio3) [Trace] CPU time slice expired (CPU runout interrupt)
+3.102 Process#3(Prio3) [Trace] State change RUNNING->READY (scheduler called)
+3.102 Process#3(Prio3) [Trace] State change READY->RUNNING
+3.202 Process#3(Prio3) [Trace] CPU time slice expired (CPU runout interrupt)
+3.202 Process#3(Prio3) [Trace] State change RUNNING->READY (scheduler called)
+3.202 Process#3(Prio3) [Trace] State change READY->RUNNING
+3.302 Process#3(Prio3) [Trace] CPU time slice expired (CPU runout interrupt)
+3.302 Process#3(Prio3) [Trace] State change RUNNING->READY (scheduler called)
+3.302 Process#3(Prio3) [Trace] State change READY->RUNNING
+3.402 Process#3(Prio3) [Trace] CPU time slice expired (CPU runout interrupt)
+3.402 Process#3(Prio3) [Trace] State change RUNNING->READY (scheduler called)
+3.402 Process#3(Prio3) [Trace] State change READY->RUNNING
+3.502 Process#3(Prio3) [Trace] CPU time slice expired (CPU runout interrupt)
+3.502 Process#3(Prio3) [Trace] State change RUNNING->READY (scheduler called)
+3.502 Process#3(Prio3) [Trace] State change READY->RUNNING
+3.602 Process#3(Prio3) [App] Standard CPU-Bound Task: Finished
+3.602 Process#3(Prio3) Terminated. Turnaround Time: 3.602s
+3.602 Scheduler [Trace] No active process, waiting for next interrupt
+3.602 Scheduler All processes terminated. Simulation finished.
+(base) s2510209@kagayaki:~/i233-assignmrnt2/process$ exit
+exit
+
+Script done on 2025-06-05 09:43:14+09:00 [COMMAND_EXIT_CODE="0"]
